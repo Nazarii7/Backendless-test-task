@@ -1,0 +1,7 @@
+.container {
+  @apply h-screen grid place-items-center bg-gradient-to-r from-slate-700 to-indigo-400;
+}
+
+.main {
+  @apply flex flex-col w-[calc(100%-400px)] p-4 ml-96;
+}

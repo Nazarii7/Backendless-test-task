@@ -1,0 +1,15 @@
+.container {
+  @apply relative flex flex-col items-center rounded-md w-[340px] h-[340px];
+}
+
+.button {
+  @apply bg-blue-900 p-4 w-full flex items-center justify-center font-bold text-lg rounded-md tracking-wider border-4 border-transparent hover:bg-slate-700 duration-700 hover:text-blue-200;
+}
+
+.list {
+  @apply bg-blue-900 mt-5 flex flex-wrap rounded-md p-4 w-[340px];
+}
+
+.items {
+  @apply flex w-full justify-center p-4 hover:text-blue-200 hover:bg-slate-700 cursor-pointer font-medium rounded-md duration-700;
+}
