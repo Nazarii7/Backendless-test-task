@@ -7,6 +7,13 @@ function DropDownList({ data, handleChange }) {
   const [isOpen, setIsOpen] = useState(false);
   const sortedData = data ? data.sort((a, b) => a.order - b.order) : [];
 
+  const handleOptionClick = (order) => {
+    // Close the dropdown menu when an option is clicked
+    setIsOpen(false);
+    // Call the handleChange function with the selected order
+    handleChange(order);
+  };
+
   return (
     <>
       <div className={styles.container}>
@@ -18,7 +25,7 @@ function DropDownList({ data, handleChange }) {
             {sortedData &&
               sortedData.map((value) => {
                 return (
-                  <li className={styles.items} key={value.id} onClick={() => handleChange(value.order)}>
+                  <li className={styles.items} key={value.id} onClick={() => handleOptionClick(value.order)}>
                     <div>
                       <NavLink to={`/${value.id}`}>{value.title}</NavLink>
                     </div>
