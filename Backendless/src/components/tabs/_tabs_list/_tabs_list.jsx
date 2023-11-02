@@ -1,19 +1,17 @@
 import { listData } from '../../../utilities/faker';
 import { GoBackButton } from '../../go_back_button/go_back_button.jsx';
+import styles from './_tabs_list.module.scss';
 
 export default function DummyList() {
   return (
     <>
       <GoBackButton />
-      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+      <ul className={styles.list}>
         {listData ? (
           listData.map((data) => {
             return (
-              <li
-                className=" bg-blue-900 p-4 shadow-md hover:shadow-lg flex items-center space-x-4 rounded-md"
-                key={data.id}
-              >
-                <img src={data.avatar} alt={data.name} className="w-12 h-12 rounded-full" />
+              <li className={styles.item} key={data.id}>
+                <img src={data.avatar} alt={data.name} className={styles.img} />
                 <div className="flex flex-col">
                   <span className="text-lg font-semibold">{data.name}</span>
                   <span className="text-md">{data.email}</span>

@@ -4,6 +4,8 @@ import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Lege
 import { chartData } from '../../../../utilities/faker';
 import { useEffect, useState } from 'react';
 
+import styles from './chart.module.scss';
+
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 function BarChart() {
@@ -12,10 +14,13 @@ function BarChart() {
   useEffect(() => {
     const interval = setInterval(() => {
       const newData = charts.map((chart) => {
+        const yearChange = Math.floor(Math.random() + 1);
+        const calculateChange =
+          Math.random() < 0.5 ? Math.floor(Math.random() * 100) + 1 : -(Math.floor(Math.random() * 100) + 1);
         return {
           ...chart,
-          calculate: (chart.calculate += Math.floor(Math.random() * 2)),
-          year: (chart.year += Math.floor(Math.random() + 1)),
+          calculate: chart.calculate + calculateChange,
+          year: chart.year + yearChange,
         };
       });
       setChartData(newData);
@@ -24,7 +29,7 @@ function BarChart() {
   }, [charts]);
 
   return (
-    <div className="relative bg-blue-900 hover:bg-slate-700 w-[700px] p-3 mt-5 shadow-md hover:shadow-2xl duration-500 rounded-md">
+    <div className={styles.wrapper}>
       <Bar
         data={{
           labels: charts.filter((data) => data.month).map((chart) => chart.month),

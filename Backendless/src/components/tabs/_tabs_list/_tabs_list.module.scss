@@ -1,0 +1,11 @@
+.list {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4;
+}
+
+.item {
+  @apply bg-blue-900 p-4 shadow-md hover:shadow-lg flex items-center space-x-4 rounded-md;
+}
+
+.img {
+  @apply w-12 h-12 rounded-full;
+}

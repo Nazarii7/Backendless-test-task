@@ -11,7 +11,7 @@ function generateTableData() {
 }
 
 export const tableData = faker.helpers.multiple(generateTableData, {
-  count: 20,
+  count: 8,
 });
 
 function generateListData() {
