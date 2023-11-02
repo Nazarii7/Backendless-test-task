@@ -1,7 +1,6 @@
 # Backendless-test-task
 
 <h2>Website</h2>
-<p>http://localhost:3000/</p>
 
 <p>To install locally</p>
 <ul>
