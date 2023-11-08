@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://Nazarii7.github.io/Backendless/",
   "scripts": {
     "dev": "webpack-dev-server",
     "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "YOUR_NAME",
@@ -22,6 +25,7 @@
     "chart.js": "^4.4.0",
     "css-loader": "^6.8.1",
     "gatsby-plugin-sharp": "^5.12.3",
+    "gh-pages": "^6.0.0",
     "html-webpack-plugin": "^5.5.3",
     "mini-css-extract-plugin": "^2.7.6",
     "postcss": "^8.4.31",
