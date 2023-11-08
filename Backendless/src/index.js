@@ -8,7 +8,7 @@ const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/">
+    <BrowserRouter basename="Backendless-test-task">
       <App />
     </BrowserRouter>
   </React.StrictMode>,
