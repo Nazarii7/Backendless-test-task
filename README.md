@@ -2,6 +2,8 @@
 
 <h2>Website</h2>
 
+<p>http://localhost:3000/Backendless/</p>
+
 <p>To install locally</p>
 <ul>
         <li>download the application using the command in your terminal:  gh repo clone Nazarii7/Backendless-test-task</li>
