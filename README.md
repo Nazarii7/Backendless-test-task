@@ -1,8 +1,8 @@
 # Backendless-test-task
 
-<h2>Website</h2>
+<h2>Website:</h2>
 
-<p>http://localhost:3000/</p>
+<p>https://backendless-4uciujolu-nazariis-projects-40647ec9.vercel.app</p>
 
 <p>To install locally</p>
 <ul>

@@ -1,0 +1,5 @@
+{
+  "public": true,
+  "outputDirectory": "dist",
+  "redirects": [{ "source": "/Backendless", "destination": "./src/index.html", "permanent": false }]
+}
